@@ -65,7 +65,9 @@ class Meal extends Component {
                 <ul className="type-bar">
                     {mealTypeList}
                 </ul>
-                <this.state.currentMealType/>
+                <this.state.currentMealType breakfastList = {this.props.breakfastList}
+                                            lunchList = {this.props.lunchList}
+                                            dinnerList = {this.props.dinnerList}/>
             </div>
         );
     }

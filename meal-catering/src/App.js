@@ -10,9 +10,13 @@ class App extends Component {
     super(props);
 
     this.getRecipe = this.getRecipe.bind(this);
+    this.handleAddMealList = this.handleAddMealList.bind(this);
 
     this.state = {
-      searchResult: []
+      searchResult: [],
+      breakfastList: [],
+      lunchList: [],
+      dinnerList: []
     }
   }
 
@@ -34,6 +38,31 @@ class App extends Component {
       e.preventDefault();
   }
 
+  handleAddMealList(e, value) {
+    //console.log(value);
+    if (value === "breakfast") {
+      let breakfastList = this.state.breakfastList;
+      breakfastList.push(e);
+      this.setState({
+        breakfastList: breakfastList
+      })
+    } else if (value === "lunch") {
+      let lunchList = this.state.lunchList;
+      lunchList.push(e);
+      this.setState({
+        lunchList: lunchList
+      })
+    } else {
+      let dinnerList = this.state.dinnerList;
+      dinnerList.push(e);
+      this.setState({
+        dinnerList: dinnerList
+      })
+    }
+    
+    //console.log(this.state.breakfastList);
+  }
+
   render() {
     return (
       <div>
@@ -41,7 +70,9 @@ class App extends Component {
         <SearchBar getRecipe={this.getRecipe}/>
         <Result results={this.state.searchResult}
                 addMealList={this.handleAddMealList}/>
-        <Meal />
+        <Meal breakfastList={this.state.breakfastList}
+              lunchList={this.state.lunchList}
+              dinnerList={this.state.dinnerList}/>
       </div>
     );
   }

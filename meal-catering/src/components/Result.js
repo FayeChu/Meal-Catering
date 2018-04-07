@@ -60,8 +60,7 @@ class Result extends Component {
                         ? resultItem
                         : "No Results"
                     }
-                </div>
-                
+                </div>   
             </div>
         );
     }

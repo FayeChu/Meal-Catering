@@ -1,0 +1,29 @@
+.meal-container {
+    display: block;
+    overflow: hidden;
+}
+
+.type-bar {
+    display: block;
+    /* height: 50px; */
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    margin: 10px;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    list-style-type: none;
+}
+
+li:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.selected {
+    border: 1px solid black;
+}

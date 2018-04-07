@@ -1,0 +1,15 @@
+img {
+    width: 110px;
+    height: 100px;
+}
+
+.lunch-list {
+    overflow: hidden;
+}
+
+.lunch-item {
+    height: 260px;
+    width: 30%;
+    float: left;
+    margin: 10px;
+}

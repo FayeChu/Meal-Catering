@@ -1,0 +1,15 @@
+img {
+    width: 110px;
+    height: 100px;
+}
+
+.breakfast-list {
+    overflow: hidden;
+}
+
+.breakfast-item {
+    height: 260px;
+    width: 30%;
+    float: left;
+    margin: 10px;
+}

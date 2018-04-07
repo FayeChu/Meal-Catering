@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Lunch.css';
 
 class Lunch extends Component {
     constructor(props, context) {
@@ -8,7 +9,7 @@ class Lunch extends Component {
     }
 
     displayLunch(e) {
-        return <div className={e.name}>
+        return <div className="lunch-item">
                     <img src={(e.thumbnail == "" ? require("../not-found.png") : e.thumbnail)} alt=""></img>
                     <div>
                         <p>Title: {e.title} </p> 
@@ -17,7 +18,7 @@ class Lunch extends Component {
                         <p>Ingredients: {e.ingredients} </p>
                     </div>
                     <div>
-                        <a href={e.href}>Source Link</a>
+                        <a target="_blank" href={e.href}>Source Link</a>
                     </div>
                     <div>
                         <button onClick={() => this.props.handleDeleteLunch(e)}>Delete From Plan</button>
@@ -30,12 +31,14 @@ class Lunch extends Component {
         let lunchListItem = lunchList.map(this.displayLunch);
 
         return (
-            <div>
-                {
-                    (lunchListItem.length > 0) 
-                    ? lunchListItem
-                    : "Nothing Added Yet"
-                }
+            <div className="lunch-container">
+                <div className="lunch-list">
+                    {
+                        (lunchListItem.length > 0) 
+                        ? lunchListItem
+                        : "Nothing Added Yet"
+                    }
+                </div>
             </div>
         );
     }

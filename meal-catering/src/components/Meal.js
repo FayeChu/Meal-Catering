@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Breakfast from './Breakfast';
 import Lunch from './Lunch';
 import Dinner from './Dinner';
+import './Meal.css';
 
 class Meal extends Component {
     constructor(props) {

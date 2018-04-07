@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Breakfast.css'
 
 class Breakfast extends Component {
     constructor(props, context) {
@@ -8,7 +9,7 @@ class Breakfast extends Component {
     }
 
     displayBreakfast(e) {
-        return <div className={e.name}>
+        return <div className="breakfast-item">
                     <img src={(e.thumbnail == "" ? require("../not-found.png") : e.thumbnail)} alt=""></img>
                     <div>
                         <p>Title: {e.title} </p> 
@@ -17,7 +18,7 @@ class Breakfast extends Component {
                         <p>Ingredients: {e.ingredients} </p>
                     </div>
                     <div>
-                        <a href={e.href}>Source Link</a>
+                        <a target="_blank" href={e.href}>Source Link</a>
                     </div>
                     <div>
                         <button onClick={() => this.props.handleDeleteBreakfast(e)}>Delete From Plan</button>
@@ -33,11 +34,13 @@ class Breakfast extends Component {
 
         return (
             <div className="breakfast-container">
-                {
-                    (breakfastListItem.length > 0) 
-                    ? breakfastListItem
-                    : "Nothing Added Yet"
-                }
+                <div className="breakfast-list">
+                    {
+                        (breakfastListItem.length > 0) 
+                        ? breakfastListItem
+                        : "Nothing Added Yet"
+                    }
+                </div>
             </div>
         );
     }

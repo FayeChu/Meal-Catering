@@ -44,6 +44,16 @@ class Result extends Component {
 
         return (
             <div className="result-container">
+                <div className="meal-type">
+                    <div className="content">Choose Meal Plan Type: </div>
+                    <div className="select">
+                        <select value={this.state.value} onChange={this.handleChange} name="type">
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                        </select>
+                    </div>
+                </div>
                 <div className="result-list">
                     {
                         (resultItems.length > 0) 

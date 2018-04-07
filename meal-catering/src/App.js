@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Titles from './components/Titles';
 import SearchBar from './components/SearchBar';
-import Result from './components/Result'
+import Result from './components/Result';
+import Meal from './components/Meal';
 
 class App extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class App extends Component {
         <SearchBar getRecipe={this.getRecipe}/>
         <Result results={this.state.searchResult}
                 addMealList={this.handleAddMealList}/>
+        <Meal />
       </div>
     );
   }

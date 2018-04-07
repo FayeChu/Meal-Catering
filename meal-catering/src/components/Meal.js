@@ -67,7 +67,10 @@ class Meal extends Component {
                 </ul>
                 <this.state.currentMealType breakfastList = {this.props.breakfastList}
                                             lunchList = {this.props.lunchList}
-                                            dinnerList = {this.props.dinnerList}/>
+                                            dinnerList = {this.props.dinnerList}
+                                            handleDeleteBreakfast={this.props.handleDeleteBreakfast}
+                                            handleDeleteLunch={this.props.handleDeleteLunch}
+                                            handleDeleteDinner={this.props.handleDeleteDinner}/>
             </div>
         );
     }
